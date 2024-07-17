@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+
+.path {
+  display: flex;
+  justify-content: space-around;
+  @include respond-to(mobile) {
+    flex-direction: column;
+  }
+}

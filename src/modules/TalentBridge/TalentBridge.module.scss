@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+
+// Bridge
+$bridge-width: 50px;
+$bridge-height: 10px;
+$bridge-background-color: #1a1c1d;
+$bridge-border-color: #202224;
+
+// Selected Bridge
+$selected-bridge-background-color: #313132;
+$selected-bridge-border-color: #505152;
+
+.bridge {
+  width: $bridge-width;
+  height: $bridge-height;
+  background-color: $bridge-background-color;
+  border-top: 2px solid $bridge-border-color;
+  border-bottom: 2px solid $bridge-border-color;
+  margin: auto 0;
+  @include respond-to(mobile) {
+    align-self: center;
+    width: $bridge-height;
+    height: $bridge-width;
+    border-top: none;
+    border-bottom: none;
+    border-left: 2px solid $bridge-border-color;
+    border-right: 2px solid $bridge-border-color;
+  }
+
+  &.isSelected {
+    background-color: $selected-bridge-background-color;
+    border-top: 2px solid $selected-bridge-border-color;
+    border-bottom: 2px solid $selected-bridge-border-color;
+    @include respond-to(mobile) {
+      border-top: none;
+      border-bottom: none;
+      border-left: 2px solid $selected-bridge-border-color;
+      border-right: 2px solid $selected-bridge-border-color;
+    }
+  }
+}

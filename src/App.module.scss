@@ -1,0 +1,47 @@
+@import "./styles/variables";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  font-family: $font-family;
+  color: $text-color;
+}
+
+body {
+  background-color: $primary-color;
+  padding: 0 $padding-medium;
+}
+
+.container {
+  background: url("./assets/talent-calc-bg.png") center center no-repeat;
+  position: sticky;
+  max-width: $max-width;
+  margin: $padding-medium auto;
+  border: 1px solid $border-color;
+  padding: $padding-small 0;
+
+  @include respond-to(mobile) {
+    background-size: cover;
+  }
+
+  @include respond-to(tablet) {
+    background-size: cover;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 0 $padding-medium $padding-large;
+  background-color: $secondary-color;
+  padding: $padding-small 0;
+
+  h1 {
+    font-size: $font-size-large;
+    @include respond-to(mobile) {
+      font-size: $font-size-small;
+    }
+    @include respond-to(tablet) {
+      font-size: $font-size-medium;
+    }
+  }
+}
